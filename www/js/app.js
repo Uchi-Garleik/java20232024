@@ -7,7 +7,7 @@ function cargarUnScript(url){
 function getVistaMenuSeleccionado(controlador, metodo) {
     let opciones = { method: "GET" };
     let parametros = "controlador=" + controlador + "&metodo=" + metodo;
-    fetch("C_Ajax.php?" + parametros, opciones)
+    fetch("controladores/C_Ajax.php?" + parametros, opciones)
         .then(res => {
             if (res.ok) {
                 console.log('Respuesta ok');

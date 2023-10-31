@@ -1,7 +1,7 @@
 <?php
-    require_once 'controladores/Controlador.php';
-    require_once 'vistas/Vista.php';
-    require_once 'modelos/M_Usuarios.php';
+    require_once 'Controlador.php';
+    require_once '../vistas/Vista.php';
+    require_once '../modelos/M_Usuarios.php';
 
     class C_Usuarios extends Controlador{
         private $modelo;
@@ -28,12 +28,12 @@
         }
 
         public function getVistaUsuarios(){
-            Vista::render('vistas/Usuarios/V_Usuarios.php');
+            Vista::render('V_Usuarios.php');
         }
         public function buscarUsuarios($filtros=array()){
             $usuarios=$this->modelo->buscarUsuarios($filtros);
             //echo json_encode($usuarios);
-            Vista::render('vistas/Usuarios/V_Usuarios_Listado.php', 
+            Vista::render('V_Usuarios_Listado.php', 
                             array('usuarios'=>$usuarios));
         }
     }

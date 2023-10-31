@@ -20,6 +20,7 @@
         }
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,4 +39,7 @@
         <span id="msj"></span>
         <button type="submit" value="Enviar">Enviar</button>
     </form>
+    <div>
+        <?php echo $mensa ?>
+    </div>
 </body>

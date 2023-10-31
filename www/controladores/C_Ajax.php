@@ -5,8 +5,8 @@
         $controlador= 'C_' .$getPost['controlador'];
         if(isset($getPost['metodo'])){
             $metodo= $getPost['metodo'];
-            if(file_exists('controladores/'.$controlador.'.php')){
-                require_once 'controladores/'.$controlador.'.php';
+            if(file_exists($controlador.'.php')){
+                require_once $controlador.'.php';
                 $objControlador= new $controlador();
                 if(method_exists($objControlador, $metodo)){
                     $objControlador->$metodo($getPost);

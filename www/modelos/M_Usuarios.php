@@ -1,6 +1,6 @@
 <?php
-    require_once 'modelos/Modelo.php';
-    require_once 'modelos/DAO.php';
+    require_once 'Modelo.php';
+    require_once 'DAO.php';
     class M_Usuarios extends Modelo{
         public $DAO;
 
