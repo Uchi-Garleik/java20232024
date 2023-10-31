@@ -13,7 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"> 
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/editTextText2"
@@ -74,7 +74,7 @@
                     android:layout_constraintTop_toTopOf="parent"/>
 
                 <ProgressBar
-                    android:id="@id+/progressBar1"
+                    android:id="@+id/progressBar1"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
