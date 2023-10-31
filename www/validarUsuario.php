@@ -5,7 +5,6 @@
     $respuesta['msj']='NO verificado';
     $respuesta['usuario']='';
     unset($_SESSION['usuario']);
-
     // $respuesta=array('valido' =>'NO', 'msj' => 'NO verificado', 'usuario'=> '');  Otro metodo para hacer un array
     if(isset($_GET)){
         extract($_GET);
