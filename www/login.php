@@ -1,3 +1,25 @@
+<?php session_start();
+    $usuario='';
+    $pass='';
+    extract($_POST);
+    //var_dump($_POST);
+    if($usuario == '' || $pass == ''){
+        $mensa='Debe completar los campos';
+    }else{
+        require_once 'controladores/C_Usuarios.php';
+        $objUsuarios = new C_Usuarios();
+        $datos['usuario']=$usuario;
+        $datos['pass']=$pass;
+        // $resultado=$objUsuarios->validarUsuario($datos);
+
+        $resultado=$objUsuarios->validarUsuario(array('usuario'=>$usuario, 'pass'=>$pass));
+        if($resultado=='S'){
+            header('Location: index.php');
+        }else{
+            $mensa='Datos incorrectos';
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,40 +27,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login2</title>
-    <script type="text/javascript">
-        function validar() {
-            const usuario = document.getElementById("usuario");
-            const pass = document.getElementById("pass");
-            let mensaje = '';
-            if (usuario.value == '' || pass.value == '') {
-                mensaje = 'Debes completar los campos.';
-            } else {
-                //LLAMADA AJAX
-                let opciones={method: "GET"};
-                let parametros= "usuario="+usuario+"&pass="+pass;
-                fetch("validarUsuario.php?"+parametros, opciones)
-                    .then(res =>{
-                        if(res.ok){
-                        console.log('Respuesta ok');
-                        return res.json();
-                        }
-                    })
-                    .then(respuestaJson=>{
-                            console.log(respuestaJson);
-                            if(respuestaJson.valido =='SI'){
-                                location.href = "index.php";
-                            }else{
-                                document.getElementById("msj").innerHTML=respuestaJson.msj;
-                            }
-                    })
-                    .catch(err=>{
-                        console.log("Error al realizar la peticion.", err.message);
-                    });
-
-            }
-            document.getElementById("msj").innerHTML=mensaje;
-        }
-    </script>
 </head>
 
 <body>
@@ -48,6 +36,6 @@
         <label for="pass">Contraseña:</label>
         <input type="password" id="pass" name="pass">
         <span id="msj"></span>
-        <input type="button" value="Enviar" onclick="validar()">
+        <button type="submit" value="Enviar">Enviar</button>
     </form>
 </body>
