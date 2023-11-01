@@ -28,18 +28,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login2</title>
+    <link rel="stylesheet" href="./webfontkit-league-of-legends-fonts/stylesheet.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
     <form id="formularioLogin" method="post" action="login.php">
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario">  <br>
-        <label for="pass">Contraseña:</label>
-        <input type="password" id="pass" name="pass">
-        <span id="msj"></span>
-        <button type="submit" value="Enviar">Enviar</button>
+        <div>
+            <h1>LOGIN</h1>
+            <div>
+                <div id="username-field" class="input-field">
+                    <label for="usuario">USERNAME</label>
+                    <input type="text" id="usuario" name="usuario">  <br>
+                </div>
+                <div id="password-field" class="input-field">
+                    <label for="pass">PASSWORD</label>
+                    <input type="password" id="pass" name="pass">
+                </div>
+                <div>
+                    <?php echo $mensa ?>
+                </div>
+            </div>
+            <div>
+                <button class="title" type="submit" value="Enviar">SIGN IN</button>
+            </div>
+            <br>
+            <span>Ir Al <a href="/">Home</a></span>
+        </div>
     </form>
-    <div>
-        <?php echo $mensa ?>
-    </div>
 </body>

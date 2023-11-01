@@ -27,7 +27,7 @@
                 $aTexto=explode(' ', $b_texto);
                 $SQL.=" AND (1=2 ";
                 foreach ($aTexto as $palabra){
-                    $SQL.=" OR apellido_1 LIKE '%$palabra%' ";
+                    $SQL.=" OR apellido_1 LIKE '%$palabra%' OR mail LIKE '%$palabra%' OR movil LIKE '%$palabra%' ";
                 }
                 $SQL.=" ) ";
                 //$SQL.=" AND apellido_1='".$b_texto."' ";
