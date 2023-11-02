@@ -1,1 +1,9 @@
-# gradle scripts > build.gradle:app (into) dependencies { implementation 'androidx.viewpager2:viewpager2:1.0.0' }
+<table>
+  <caption>Can you write HTML in a readme file?</caption>
+  <tr>
+    <th>First</th>
+  </tr>
+  <tr>
+    <td>First.Description</td>
+  </tr>
+</table>
