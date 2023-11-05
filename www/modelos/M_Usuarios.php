@@ -5,12 +5,14 @@
         public $DAO;
 
         public function __construct(){
-            parent::__construct(); //ejecuta constructor del padre
+            parent::__construct();
             $this->DAO = new DAO();
         }
 
         public function buscarUsuarios($filtros=array()){
-            $b_texto='';
+            $nombre='';
+            $mail='';
+            $movil='';
             $usuario = '';
             $pass = '';
             extract($filtros);
@@ -21,21 +23,33 @@
                 $usuario = addslashes($usuario);
                 $pass = addslashes($pass);
                 $SQL.= " AND login = '$usuario' AND pass = MD5('$pass') ";
-            }
-
-            if($b_texto!=''){
-                $aTexto=explode(' ', $b_texto);
-                $SQL.=" AND (1=2 ";
-                foreach ($aTexto as $palabra){
-                    $SQL.=" OR apellido_1 LIKE '%$palabra%' OR mail LIKE '%$palabra%' OR movil LIKE '%$palabra%' ";
+            }else{
+                if($nombre!=''){
+                    $aTexto=explode(' ', $nombre);
+                    $SQL.=" AND (1=2 ";
+                    foreach ($aTexto as $palabra){
+                        $SQL.=" OR nombre LIKE '%$palabra%' OR apellido_1 LIKE '%$palabra%' OR apellido_2 LIKE '%$palabra%'";
+                    }
+                    $SQL.=" ) ";
                 }
-                $SQL.=" ) ";
-                //$SQL.=" AND apellido_1='".$b_texto."' ";
-                if ($b_texto == 'debug') {
-                    echo $SQL;
+                if($mail!=''){
+                    $aTexto=explode(' ', $mail);
+                    $SQL.=" AND (1=2 ";
+                    foreach ($aTexto as $palabra){
+                        $SQL.=" OR mail LIKE '%$palabra%'";
+                    }
+                    $SQL.=" ) ";
+                }
+                if($movil!=''){
+                    $aTexto=explode(' ', $movil);
+                    $SQL.=" AND (1=2 ";
+                    foreach ($aTexto as $palabra){
+                        $SQL.=" OR movil LIKE '%$palabra%'";
+                    }
+                    $SQL.=" ) ";
                 }
             }
-            
+            // echo $SQL;
             $usuarios=$this->DAO->consultar($SQL);
             return $usuarios;
         }

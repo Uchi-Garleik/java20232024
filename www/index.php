@@ -21,13 +21,14 @@ if (isset($_SESSION['usuario']) && $_SESSION['usuario'] != '') {
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="./css/menu.css">
 </head>
 
 <body>
     <section id="secMenuPagina" class="container-fluid">
     <section id="secEncabezadoPagina" class="container-fluid">
         <div class="row">
-            <div class="divTituloApp col-lg-8 col-md-8 d-none d-md-block">Desarrollo de Interfaces.</div>
+            <div class="divTituloApp col-lg-8 col-md-8 d-none d-md-block">Desarrollo de Interfaces - Manel Serna</div>
         </div>
     </section>
 

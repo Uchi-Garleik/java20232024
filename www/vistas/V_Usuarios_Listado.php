@@ -1,6 +1,6 @@
 <?php
     $usuarios= $datos['usuarios'];
-
+    echo '<div id="tableDiv">';
     echo '<table>';
     echo '<tr>';
     echo '<th>Nombre</th>';
@@ -12,11 +12,22 @@
     echo '<th>Activo</th>';
     echo '</tr>';
 
-    function returnCosa($fila){
+    function returnEstado($fila){
         if ($fila['activo'] == 'S') {
             return "activo";
         }else{
             return "inactivo";
+        }
+    }
+
+    function returnGenero($fila){
+        if ($fila['sexo'] == 'H') {
+            return "Hombre";
+        }
+        if ($fila['sexo'] == "M") {
+            return "Mujer";
+        }else{
+            return "No especificado";
         }
     }
 
@@ -27,11 +38,11 @@
         echo '<td>'.$fila['apellido_2'].'</td>';
         echo '<td>'.$fila['mail'].'</td>';
         echo '<td>'.$fila['movil'].'</td>';
-        echo '<td>'.$fila['sexo'].'</td>';
-        echo '<td>'.returnCosa($fila).'</td>';
+        echo '<td>'.returnGenero($fila).'</td>';
+        echo '<td>'.returnEstado($fila).'</td>';
         echo '</tr>';
     }
 
     echo '</table>';
-
+    echo '</div>';
 ?>

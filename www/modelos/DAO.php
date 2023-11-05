@@ -7,7 +7,7 @@
     class DAO{
 		private $conexion; 
 				
-		public function __construct(){ //constructor
+		public function __construct(){ 
 			$this->conexion= new mysqli(HOST,USER,PASS,DB);
 			if($this->conexion->connect_errno){
 				die('Error de conexión: '.$this->conexion->connect_error);
@@ -15,8 +15,7 @@
 		}
 
         public function consultar($SQL){
-			//NO VISUALIZAR NADA AQUI PUES NO RETURN-ARA BIEN
-			$res=$this->conexion->query($SQL,MYSQLI_USE_RESULT); //sin usar buffer mysql
+			$res=$this->conexion->query($SQL,MYSQLI_USE_RESULT);
 			$filas=array();
 			if ($this->conexion->errno) {
 					die('Error en consulta: '.$this->conexion->error.' SQL: <b>'.$SQL.'</b>');
@@ -32,7 +31,6 @@
             $this->conexion->query($SQL, MYSQLI_USE_RESULT);
             if($this->conexion->connect_errno){
                 die('Error insertar BD: '.$SQL);
-                return '';
             }else{
                 return $this->conexion->insert_id;
             }
@@ -42,7 +40,6 @@
             $this->conexion->query($SQL, MYSQLI_USE_RESULT);
             if($this->conexion->connect_errno){
                 die('Error update BD: '.$SQL);
-                return '';
             }else{
                 return $this->conexion->affected_rows;
             }

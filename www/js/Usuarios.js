@@ -10,7 +10,6 @@ function buscarUsuarios(){
             }
         })
         .then(vista => {
-
             document.getElementById("capaResultadosBusqueda").innerHTML = vista;
         })
         .catch(err => {

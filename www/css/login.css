@@ -5,7 +5,7 @@ html{
 #formularioLogin {
     width: 426px;
     height: 426px;
-    background: linear-gradient(to bottom right, blue, red);
+    background: linear-gradient(to bottom right, #FFDB90, #7A5622);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@ html{
 }
 
 #formularioLogin>div>div:last-of-type {
-    background: linear-gradient(to bottom right, blue, red);
+    background: linear-gradient(to bottom right, #FFDB90, #7A5622);
     display: inline-block;
     margin-top: 2em;
 }
