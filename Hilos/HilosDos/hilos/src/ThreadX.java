@@ -1,15 +1,7 @@
 public class ThreadX extends Thread{
-    Character letter;
-    Boolean run = false;
-    Thread nextThread;
-
-    public Thread getNextThread() {
-        return nextThread;
-    }
-
-    public void setNextThread(Thread nextThread) {
-        this.nextThread = nextThread;
-    }
+    private Character letter;
+    private static ThreadX currentThread = null;
+    private ThreadX nextThread;
 
     public ThreadX(Character letter) {
         this.letter = letter;
@@ -19,23 +11,40 @@ public class ThreadX extends Thread{
         return letter;
     }
 
-    public void setLetter(Character letter) {
-        this.letter = letter;
+    public void setNextThread(ThreadX nextThread) {
+        this.nextThread = nextThread;
+    }
+
+    public static ThreadX getCurrentThread() {
+        return currentThread;
+    }
+
+    public static void setCurrentThread(ThreadX currentThread) {
+        ThreadX.currentThread = currentThread;
     }
 
     @Override
     public void run() {
-        try {
-            this.wait();
-        } catch (Exception e) {
-            System.out.println("e");
-        }
-        if (this.run) {
-            for (int i = 0; i < 10; i++) {
-                System.out.println(i + ": " + getLetter());
+        try{
+            synchronized (this){
+                while ( currentThread != this ){
+                    wait();
+                }
+                for (int i = 0; i < 10; i++) {
+                    System.out.println("Number: " + i + " -- Thread: " + getLetter());
+                    currentThread = nextThread;
+                    synchronized (nextThread){nextThread.notify();}
+                    if ( (currentThread.getLetter().equals('C') && i >= 9) ){
+                        System.out.println("bye");
+                    }else{
+                        this.wait();
+                    }
+                }
             }
-        } else {
-            System.out.println("parado");
+        } catch(InterruptedException e){
+            System.out.println("Awaiting orders!");
         }
     }
+
+
 }
