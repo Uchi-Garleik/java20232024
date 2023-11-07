@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body {
+  min-height: auto;
+  background-image:url(img/3.jpg);
+  /* background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),url(img/3.jpg); */
+  background-size: cover;
+  background-attachment: fixed;
+  /* color:rgba(255, 255, 255, 0.623); */
+  color: white;
+}
+
+/* COMPLETE ORDER SCREEN */
+.modal-content {
+  color: black;
+  background-color: blanchedalmond;
+  border: 5px solid rgb(165, 101, 42);
+}
+
+/* PRODUCTOS */
+/* COMPLETE ORDER SCREEN */
+.modal-content {
+  color: black;
+  background-color: blanchedalmond;
+  border: 5px solid rgb(165, 101, 42);
+}
+
+/* PRODUCTOS */
+.container{
+  width: 75%;
+}
+
+#products{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1em;
+}
+
+
+
+#categories {
+  color: black;
+}
+
+
+.product-container {
+  border: 4px #F4C36F solid;
+  display: inline-block;
+  width: 280px;
+  font-family: 'Alata', sans-serif;
+}
+
+.product-image {
+  background: url(./img/coffee-smoke.jpg);
+  background-size: cover;
+  height: 54%;
+}
+
+.product-information {
+  background: linear-gradient(180deg, #653E23 -11.03%, rgba(255, 112, 12, 0.48) 46.51%, #74421F 107.14%);
+  padding: 2rem;
+  height: 46%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-header {
+  border: 3px salmon solid;
+}
+
+.product-name {
+  margin: 0;
+}
+
+.product-img {
+
+  width: 100%;
+}
+
+.btn-add-cart {
+  border: 3px solid #FBD275;
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  background: linear-gradient(239deg, #ffac2d 7%, #ff8219);
+  transition-duration: 0.2s;
+}
+
+.btn-add-cart:hover {
+  border: 3px solid #FBD275;
+  filter: contrast(130%);
+  transform: scale(1.02);
+}
+
+
+.affix {
+  position: relative;
+}
+
+#footer {
+  margin-top: 120px;
+}

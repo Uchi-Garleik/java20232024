@@ -1,0 +1,514 @@
+/*FUENTES*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Alef&display=swap');
+
+/* Estilo para el cuerpo */
+
+body {
+  font-family: 'Alata', sans-serif;
+  min-height: auto;
+  margin: 0;
+  background-image:url(img/3.jpg);
+  /* background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)),url(img/3.jpg); */
+  background-size: cover;
+  background-attachment: fixed;
+  /* color:rgba(255, 255, 255, 0.623); */
+  color: white;
+  width: auto;
+  height: auto;
+}
+
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(img/1.jpg) no-repeat center center fixed;
+  background-size: cover;
+  filter: brightness(0.5);
+  /* Valor de brillo reducido a la mitad */
+  z-index: -1;
+}
+
+/* Estilo para el contenedor principal */
+.cuerpo {
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  /* Otros estilos... */
+}
+
+#mainTitle {
+  margin-bottom: 0% !important;
+  padding-top: 20px !important;
+  background-image: url(img/1.jpg) no-repeat center center fixed;
+  background-color: #8c5a3871;
+  /* Aquí se define el color sólido */
+  background-blend-mode: multiply;
+  /* Se define el modo de mezcla */
+
+}
+
+
+/* Estilo para el título */
+h1 {
+  -webkit-text-stroke-color: rgba(140, 90, 56, 1) !important;
+  -webkit-text-stroke-width: 3px;
+  display: flex;
+  font-family: 'Alata', sans-serif !important;
+  font-size: 8rem !important;
+  color: rgba(217, 185, 136, 1) !important;
+  /* Color del texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.479);
+  /* Sombra del texto para dar realismo */
+  background-image: url(img/3.jpg);
+  background-size: 120%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 25vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px !important;
+}
+
+
+
+/* Estilo para la navegación */
+nav {
+  background-color: transparent;
+}
+
+#apartadosCabecera {
+  font-family: 'Alata', sans-serif;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 10px 5px;
+  background-image: url(img/1.jpg)no-repeat center center fixed;
+  background-color: rgba(140, 90, 56, 0.443);
+  background-blend-mode: multiply;
+  /* Se define el modo de mezcla */
+  border: 2px;
+  border-style: solid;
+  border-color: rgba(217, 185, 136, 1);
+}
+
+nav li {
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+
+
+}
+
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(217, 185, 136, 1) !important;
+  font-weight: bold;
+  font-size: medium;
+  padding: 5px 5px;
+
+}
+
+a.titleLink {
+  text-decoration: none !important;
+  color: rgba(217, 185, 136, 1) !important;
+}
+
+a.titleLink:hover {
+  background-color: rgba(217, 185, 136, 1);
+  text-decoration: none !important;
+  color: #8C5A38 !important;
+}
+
+
+/* #apartadosCabecera li:hover {
+  background-color: #d9b988e7;
+  color: #8C5A38 !important;
+} */
+
+/* Estilo para los puestos de trabajo */
+/* ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} */
+
+/* li {
+   width: 25%;
+   text-align: center;
+  margin-bottom: 0px;
+}  */
+
+h3 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* p {
+  margin-top: 0;
+} */
+
+/* a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 5px 10px;
+  background-color: #f2f2f2;
+}
+
+a:hover {
+  background-color: #333;
+  color: #fff;
+} */
+
+
+
+.content-container {
+  background-color: transparent;
+  margin-top: 0px;
+}
+
+#SobreNosotrosContent {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#titulosSobreNosotros {
+  -webkit-text-stroke-color: #8c5a38 !important;
+  -webkit-text-stroke-width: 1px;
+  font-family: 'Alata', sans-serif !important;
+  font-size: 5rem !important;
+  color: #d8b989 !important;
+}
+
+#SobreNosotrosContent>div {
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+#bloqueImgTexto1 {
+  background-image: url(img/cafeteriaAntigua.jpg);
+  background-color: #8c5a387e;
+  /* Aquí se define el color sólido */
+  background-blend-mode: multiply;
+  /* Se define el modo de mezcla */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  align-items: center !important;
+  margin-bottom: 2em;
+}
+
+#texto1 {
+  color: #f5d19b;
+  padding: 20px 100px 30px 50px;
+}
+
+#bloqueImgTexto2 {
+  background-image: url(img/camposCafe.jpg);
+  background-color: #35462371;
+  /* Aquí se define el color sólido */
+  background-blend-mode: multiply;
+  /* Se define el modo de mezcla */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  align-items: center !important;
+  margin-bottom: 2em;
+}
+
+#texto2 {
+  color: #f5d19b;
+  padding: 20px 100px 30px 50px;
+  line-height: 2em;
+}
+
+#bloqueImgTexto3 {
+  background-image: url(img/Productos.jpg);
+  background-color: #5a3e0a71;
+  /* Aquí se define el color sólido */
+  background-blend-mode: multiply;
+  /* Se define el modo de mezcla */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  align-items: center !important;
+  margin-bottom: 2em;
+}
+
+#texto3 {
+  color: #f5d19b;
+  padding: 20px 100px 30px 50px;
+  line-height: 2em;
+}
+
+
+
+/* .primera-parte {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-family: DroidSerif;
+  font-size: 14px;
+  line-height: 1.42857;
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  background-color: #035232;
+  color: #fff;
+} */
+
+/*BLOQUE 1*/
+#bloque1 {
+  display: flex;
+  width: 100%;
+  height: 400px;
+}
+
+/*BLOQUE TEXTO*/
+#bloqueTextoBloque1 {
+  background-color: transparent;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  float: left;
+  font-size: large;
+}
+
+/*TEXTO*/
+#textoBloque1 {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 10);
+  background-image: url(img/1.jpg)no-repeat center center fixed;
+  background-color: #8c5a3871;
+  /* Aquí se define el color sólido */
+  background-blend-mode: multiply;
+  /* Se define el modo de mezcla */
+  margin: 50px 150px 0 250px;
+  padding: 1em 2em;
+  line-height: 2.4em;
+  color: #d8b989;
+  font-family: 'Alata', sans-serif;
+
+}
+
+/*IMAGEN ICONO*/
+#imgBloque1 {
+  display: flex;
+  background-color: transparent;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+}
+
+#imgLogo {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 10);
+  background-image: url(img/1.jpg)no-repeat center center fixed;
+  background-color: #8c5a3871;
+  /* Aquí se define el color sólido */
+  background-blend-mode: multiply;
+  /* Se define el modo de mezcla */
+  margin-top: 50px;
+  border-radius: 66%;
+}
+
+/*BLOQUE 2*/
+#bloque2 {
+  display: flex;
+  width: 100%;
+  height: 800px;
+}
+
+/*MAPA*/
+#mapaBloque2 {
+  display: flex;
+  align-items: center;
+  /* width: 100%; */
+  height: 100%;
+  width: 951px;
+
+}
+
+
+/*BLOQUE FORMULARIO*/
+#bloqueFormBloque2 {
+  display: flex;
+  margin-top: 70px;
+  background-color: transparent !important;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  float: left;
+}
+
+/*ESTILO FORMULARIO*/
+#formBloque2 {
+  width: 65%;
+  display: flex;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 10);
+  flex-direction: column;
+  gap: 15px;
+}
+
+#formBloque2 input,
+#formBloque2 textarea {
+  border-style: none;
+  font-family: 'Alata', sans-serif;
+  background-color: rgba(102, 51, 0, 0.8);
+  color: #d8b989;
+  padding: 0% 5%;
+  font-size: 1em;
+  font-weight: bolder;
+  border: 3px solid #D9B988;
+  border-radius: 4px;
+}
+
+#formBloque2 input::-webkit-input-placeholder {
+  color: #d8b989;
+}
+
+#formBloque2 textarea::-webkit-input-placeholder {
+  color: #d8b989;
+}
+
+/* CAMPOS FORMULARIO */
+#textoNombre {
+  line-height: 5rem;
+}
+
+#textoEmail {
+  line-height: 5rem;
+}
+
+#textoTelefono {
+  line-height: 5rem;
+}
+
+#textoMensaje {
+  padding-top: 15px !important;
+  height: 15rem;
+  justify-content: left;
+}
+
+#botonEnviar {
+  width: 100%;
+  height: 5rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+
+#botonEnviar:hover {
+  filter: contrast(1.5);
+  filter: drop-shadow(1.5);
+}
+
+#formCVBloque {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+
+}
+
+#cvForm {
+  font-family: 'Alata', sans-serif;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 10);
+  background-image: url(img/1.jpg)no-repeat center center fixed;
+  background-color: #8c5a3871;
+  /* Aquí se define el color sólido */
+  background-blend-mode: multiply;
+  color: #d8b989;
+  display: flex;
+  width: 30em;
+  flex-direction: column;
+  gap: 35px;
+
+}
+
+#cvForm input,
+#cvForm textarea,
+#cvForm button {
+  font-family: 'Alata', sans-serif;
+  border-style: none;
+  color: #d8b989;
+  background-color: rgba(102, 51, 0, 0.8);
+  padding: 0% 5%;
+  font-size: 1em;
+  font-weight: bolder;
+  border: 3px solid #D9B988;
+  border-radius: 4px;
+}
+
+#cvForm input::-webkit-input-placeholder {
+  color: rgba(216, 185, 137, 0.8);
+}
+
+#cvForm textarea::-webkit-input-placeholder {
+  color: rgba(216, 185, 137, 0.8);
+}
+/* CAMPOS FORMULARIO CV*/
+#textoNombreCv {
+  line-height: 3rem;
+}
+
+#emailTextoCv {
+  line-height: 3rem;
+}
+#textoFormCv{
+  margin-top: 15px;
+}
+#cv {
+  line-height: 3rem;
+}
+
+#textoMensajeCv {
+  padding-top: 15px !important;
+  height: 15rem;
+  justify-content: left;
+}
+
+#botonEnviarCv {
+ 
+  width: 100%;
+  height: 5rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+
+#botonEnviarCv:hover {
+  filter: contrast(1.5);
+  filter: drop-shadow(1.5);
+}
+
+.burger-menu-elem {
+  width: 33.5vh;
+}

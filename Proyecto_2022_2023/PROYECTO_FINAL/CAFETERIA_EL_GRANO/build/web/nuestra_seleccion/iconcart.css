@@ -1,0 +1,13 @@
+.basket-button.highlight {
+    text-shadow: 0 0 5px #ff9900; /* Agrega un efecto de sombra amarilla al texto */
+    animation: highlightAnimation 1s; /* Agrega una animación de iluminación */
+  }
+  
+  @keyframes highlightAnimation {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }

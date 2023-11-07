@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/user-area.css">
+    <link rel="stylesheet" href="styles/cursor-styles.css">
+
+    <script defer src="../script/jquery-3.6.4.min.js"></script>
+    <script defer src="../script/cookie.js"></script>
+
+    <script defer src="./script/authentication.js"></script>
+    <script defer src="./script/redirections.js"></script>
+    <script defer src="./script/content-controller.js"></script>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="grid-item grid-item-1">
+
+            <img class="left-logo" src="../img/LOGO.png" alt="">
+            <div class="ul-container">
+
+                <ul title="">
+
+                    <li><a href="https://www.ccoo-servicios.es/archivos/hosteleria-zaragoza-2022.pdf">Union</a></li>
+
+                    <li><a id="Boton1" type="button">Company Hierarchy</a></li>
+
+                    <li><a id="Boton2" type="button">Strikes</a></li>
+
+                    <li><a href="http://localhost:8080/CAFETERIA_EL_GRANO/img/FOL/tablaPRL.pdf">PRL</a></li>
+
+                    <li><a  id="Boton3" type="button">Agreements</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="div-btn">
+                <button class="btn pointer home">HOME</button>
+            </div>
+        </div>
+
+        <div class="grid-item-2">
+            <img src="img/shid/thiccv1.png" alt="">
+            <div class="user-info">
+                <div>
+                    <h1 class="account-type">Cliente</h1>
+                    <h2 class="username">USERNAME</h2>
+                    <h3 class="email">email@gmail.com</h3>
+                    <h3 class="password">***********</h3>
+                </div>
+                <div>
+                    <h3 onclick="signout();">Log out</h3>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-3">
+            <div class=" private grid-item-section">
+                <div class="convenio grid-item-option">
+                    <p>UNION</p>
+                </div>
+                <div class="hierarchy grid-item-option">
+                    <p>COMPANY HIERARCHY</p>
+                </div>
+                <div class="strikes grid-item-option">
+                    <p>STRIKES</p>
+                </div>
+                <div class="prevencion grid-item-option">
+                    <p>PRL</p>
+                </div>
+                <div class="acuerdos grid-item-option">
+                    <p>Agreements</p>
+                </div>
+            </div>
+
+            <div class="private grid-item-section">
+
+
+            </div>
+
+            <div id="direccion" class="hide">
+                <h1>Executive Team</h1>
+                <div id="miembros">
+                    <div id="director">
+                        <img src="../img/FOL/manel.png" alt="manel">
+                        <p>CEO, Manel Serna</p>
+                        <p>I have an inspirational leadership and strategic approach, driving company growth and success
+                            by building motivated and engaged teams.</p>
+                    </div>
+                    <div id="secretario">
+                        <img src="../img/FOL/dmitri.png" alt="dmitri">
+                        <p>Secretary, Dmitri Jecev</p>
+                        <p>I stand out for my efficiency in administrative tasks, effective communication, and providing
+                            solid support
+                            to the organization with organizational skills and attention to detail.</p>
+                    </div>
+                </div>
+                <button type="button" class="pointer return" id="return">RETURN</button>
+            </div>
+
+
+
+            <div id="strikes" class="hide">
+                <table class="video-table">
+                    <tr>
+                        <td>
+                            <video width="320" height="240" controls>
+                                <source src="../img/FOL/huelga_manel.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                        <td>
+                            <p>Call to strike by Manel Serna</p>
+                        </td>
+                    </tr>
+                </table>
+                <table class="video-table">
+                    <tr>
+                        <td>
+                            <video width="320" height="240" controls>
+                                <source src="../img/FOL/DmitriHuelga.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                        <td>
+                            <p>Call to strike by Dmitri Jecev</p>
+                        </td>
+                    </tr>
+                </table>
+                <button type="button" id="return" class="pointer return">RETURN</button>
+            </div>
+
+
+            <div id="acuerdos" class="hide">
+                <div id="contenedor-acuerdos">
+                    <div>
+                        <h1>Staff Quality</h1>
+                        <p>Training of personnel in customer service skills or other services so that they can develop
+                            professionally in their fields of work.</p>
+                    </div>
+                    <div>
+                        <h1>New order system</h1>
+                        <p>The implementation of online ordering systems that allow customers to place orders online.
+                            This will involve adapting certain workplaces to the use of technologies and software that
+                            allow the management of these orders.</p>
+                    </div>
+                    <div>
+                        <h1>Implementation of flexible schedules</h1>
+                        <p>Promoting the reconciliation of work and family life. Some measures could be the
+                            establishment of rotating shifts, staggered schedules or reduced schedules. It is important
+                            to establish a clear policy on flexible schedules and ensure that fair and equitable rules
+                            are established for all workers.</p>
+                    </div>
+                    <div>
+                        <h1>Incentive System</h1>
+                        <p>to increase staff motivation and achieve greater involvement in the workplace</p>
+                    </div>
+                    <div>
+                        <h1>Training Programs</h1>
+                        <p>In which topics such as effective communication, conflict resolution, empathy and teamwork
+                            are addressed.</p>
+                    </div>
+                    <div>
+                        <h1>Satisfaction Surveys</h1>
+                        <p>A suggestion box style where employees can suggest changes they feel are needed in their
+                            workplace or on the premises.</p>
+                    </div>
+                </div>
+                <button type="button" id="return" class="pointer return">RETURN</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

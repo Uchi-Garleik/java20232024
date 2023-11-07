@@ -1,0 +1,165 @@
+/* =======================================
+        Slider
+        ====================================*/
+        @import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+.slider{
+    font-family: 'Alata', sans-serif;
+}
+
+
+.slick-slider button {
+    position: absolute;
+    top: 43%;
+    outline: "none";
+    border: 2px #F4C36F  solid;
+    width: 80px;
+    height: 57px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.804);
+    opacity: 1;
+    color: white;
+    z-index: 99;
+}
+
+.slick-slider .slick-prev {
+    left: 2%;
+    font-size: 0;
+}
+
+.slick-slider .slick-prev::before {
+    content: '<';
+    line-height: 0.5;
+    font-size: 25px;
+}
+
+
+
+.slick-slider .slick-next {
+    right: 3%;
+    font-size: 0;
+}
+
+.slick-slider .slick-next::after {
+    content: '>';
+    line-height: 0.5;
+    font-size: 25px;
+}
+
+.text-center.pb-2.bg-dark.w-100.pt-3.bg-opacity-75{
+    padding-left: 2rem!important;
+    padding-right: 2rem!important;
+}
+
+.d-flex.bg-opacity-25.justify-content-center.align-items-end{
+    padding-left: 4rem!important;
+    padding-right: 4rem!important;
+}
+
+.slick-dots {
+    text-align: center;
+}
+
+.slick-dots li {
+    display: inline-block;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.417);
+    margin: 10px 5px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    border: 1px solid #F4C36F ;
+  }
+
+.slick-dots button {
+    display: none;
+}
+
+.slick-dots li.slick-active {
+    background: rgb(127, 68, 20);
+}
+
+.slick-slider img {
+    width: 100%;
+    height: 250px;
+}
+
+
+
+.slick-slide {
+    padding: 90px 0;
+    position: relative;
+    opacity: 0.5;
+    transition: all 900ms ease;
+    
+}
+
+.slick-current {
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.slick-slide .xyz {
+    opacity: 0;
+}
+
+.slick-current .xyz {
+    opacity: 1;
+}
+
+
+
+.slick-slider {
+    padding-top: 7vh;
+    /* Ajusta el valor según sea necesario */
+    /* Cambia 'ruta/a/tu/imagen.jpg' por la ruta real de tu imagen */
+    background-size: cover;
+    /* La imagen se ajustará para cubrir todo el área del contenedor */
+    background-position: center center;
+    /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+
+
+}
+
+.slick-slide {
+    margin-top: auto;
+    /* Ajusta el valor según sea necesario */
+}
+
+a {
+    color: #fffafa;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+  
+  .text-white {
+    box-shadow: 0px 0px 7px 0px black;
+    padding: 2px;
+    border: 2px solid #F4C36F ;
+    background-color: #13100bd4;
+    font-size: 2.3rem;
+    padding: 0.4em 0;
+    border-radius: 0;
+    letter-spacing: 1px;
+  }
+.card{
+    box-shadow: 0px 0px 8px 3px black;
+    border: 1px #F4C36F  solid;
+    height: 37vh;
+}
+  a.text-white {
+    margin-top: -60px; /* ajusta el valor según sea necesario */
+  }
+  

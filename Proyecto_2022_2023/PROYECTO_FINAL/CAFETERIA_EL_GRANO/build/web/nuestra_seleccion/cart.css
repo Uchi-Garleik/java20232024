@@ -1,0 +1,73 @@
+/* Quick fix for Our Selection's burger-menu-elem */
+.burger-menu-elem{
+  height: 1130px! important;
+}
+/***/
+
+
+.products > div {
+    display: flex;
+    justify-content: space-between;
+    border: 2px #F4C36F solid;
+    font-size: 1.5em;
+    padding: 0.6em 0.7em;
+    background-color: rgb(14 9 2 / 69%);
+    border-radius: 7px;
+    align-items: center;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  .remove-product-button{
+    padding: .2em .4em;
+    border-radius: 5px;
+    background: linear-gradient(239deg, #ffac2d 7%, #ff8219);
+    color: white;
+    font-weight: bolder;
+    -webkit-text-stroke: .4px;
+    -webkit-text-stroke-color: black;
+    /* animation-delay: all 0.3s; */
+    transition-duration: 0.2s;
+  }
+
+  .remove-product-button:hover{
+    border: 1px solid #FBD275;
+    filter: contrast(130%);
+  }
+
+  .products{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .cart-info{
+    padding: 1em 0;
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .cart-info::after{
+    content: '€';
+  }
+
+  div.col.col-sm-3.col-xs-6{
+      width: 24%;
+  }
+  
+  #cart .btn{
+    background: linear-gradient(239deg, #ffac2d 7%, #ff8219);
+    font-size: 1.2em;
+    padding: 0.6em 1.2em;
+    border: 3px solid #FBD275;
+    transition-duration: 0.3s;
+  }
+
+  #cart .btn:hover{
+    border: 3px solid #FBD275;
+    filter: contrast(130%);
+    transform: scale(1.02);
+  }
+
+  #carty > h1{
+    letter-spacing: 0.03em;
+  }

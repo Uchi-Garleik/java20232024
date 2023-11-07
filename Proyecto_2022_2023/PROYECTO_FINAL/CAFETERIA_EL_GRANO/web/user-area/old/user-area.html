@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="styles/user-area.css">
+    <link rel="stylesheet" href="styles/cursor-styles.css">
+    
+    <script defer src="../script/jquery-3.6.4.min.js"></script>
+    <script defer src="../script/cookie.js"></script>
+    
+    <script defer src="./script/authentication.js"></script> 
+    <script defer src="./script/redirections.js"></script>
+    <script defer src="./script/content-controller.js"></script>
+</head>
+<body>
+    <div class="grid">
+        <div class="grid-item grid-item-1">
+            <div class="ul-container">
+
+            </div>
+            <div class="div-btn">
+                <button class="btn pointer home">HOME</button>
+            </div>
+        </div>
+
+        <div class="grid-item-2">
+            <img src="img/shid/thiccv1.png" alt="">
+            <div class="user-info">
+                <div>
+                    <h1 class="account-type">Cliente</h1>
+                    <h2 class="username">USERNAME</h2>
+                    <h3 class="email">email@gmail.com</h3>
+                    <h3 class="password">***********</h3>
+                </div>
+                <div>
+                    <h3 onclick="signout();">Log out</h3>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-3">
+            <div class="private grid-item-section">
+                <div class="convenio grid-item-option">
+                    <p>UNION</p>
+                </div>
+                <div class="hierarchy grid-item-option">
+                    <p>COMPANY HIERARCHY</p>
+                </div>
+                <div class="strikes grid-item-option">
+                    <p>STRIKES</p>
+                </div>
+                <div class="prevencion grid-item-option">
+                    <p>PRL</p>
+                </div>
+                <div class="acuerdos grid-item-option">
+                    <p>Agreements</p>
+                </div>
+            </div>
+            <div id="direccion" class="hide">
+                <h1>Executive Team</h1>
+                <div id="miembros">
+                    <div id="director">
+                        <img src="../img/FOL/manel.png" alt="manel">
+                        <p>CEO, Manel Serna</p>
+                    </div>
+                    <div id="secretario">
+                        <img src="../img/FOL/dmitri.png" alt="dmitri">
+                        <p>Secretary, Dmitri Jecev</p>
+                    </div>
+                </div>
+                <button type="button" class="pointer return" id="return">RETURN</button>
+            </div>
+            <div id="strikes" class="hide">
+                <video width="320" height="240" controls>
+                    <source src="../img/FOL/huelga_manel.mp4" type="video/mp4">
+                </video>
+                <video width="320" height="240" controls>
+                    <source src="../img/FOL/DmitriHuelga.mp4" type="video/mp4">
+                </video>
+                <button type="button" id="return" class="pointer return">RETURN</button>
+            </div>
+            <div id="acuerdos" class="hide">
+                <div id="contenedor-acuerdos">
+                    <div>
+                        <h1>Calidad Del Personal</h1>
+                        <p>Formación del personal en habilidades de atención al cliente u otros servicios de forma que estos puedan desarrollarse profesionalmente en sus campos de trabajo</p>
+                    </div>
+                    <div>
+                        <h1>Nuevo Sistema De Pedidos</h1>
+                        <p>La implementación de sistemas de pedidos en línea que permita a los clientes realizar pedidos en línea. Esto supondrá una adaptación de ciertos puestos de trabajo al uso de tecnologías y software que permita la gestión de estos pedidos</p>
+                    </div>
+                    <div>
+                        <h1>implementación De Horarios Flexibles</h1>
+                        <p>La promoción de la conciliación de la vida laboral con la vida familiar. Algunas medidas podrían ser el establecimiento de turnos rotativos, horarios escalonados u horarios reducidos. Es importante establecer una política clara sobre horarios flexibles y asegurarse de que se establecen reglas justas y equitativas para todos los trabajadores</p>
+                    </div>
+                    <div>
+                        <h1>Sistema De Incentivos</h1>
+                        <p>para aumentar la motivación del personal y lograr una mayor implicación en el puesto de trabajo</p>
+                    </div>
+                    <div>
+                        <h1>Programas De Formacion</h1>
+                        <p>En los que se aborden temas como la comunicación efectiva, la resolución de conflictos, la empatía y el trabajo en equipo</p>
+                    </div>
+                    <div>
+                        <h1>Encuestas De Satisfaccion</h1>
+                        <p>Un estilo de buzón de sugerencias en la que los trabajadores puedan sugerir cambios que creen oportunos en su puesto de trabajo o en el local</p>
+                    </div>
+                </div>
+                <button type="button" id="return" class="pointer return">RETURN</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

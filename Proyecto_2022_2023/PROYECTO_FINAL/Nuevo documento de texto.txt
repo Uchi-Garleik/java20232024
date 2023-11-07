@@ -1,0 +1,91 @@
+DROP TABLE USERS;
+
+CREATE TABLE USERS(
+	ID INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+	ACCOUNT_TYPE VARCHAR(30) NOT NULL,
+	EMAIL VARCHAR(40) NOT NULL,
+	USERNAME VARCHAR(30) NOT NULL UNIQUE,
+	PASSWORD VARCHAR(40) NOT NULL
+);
+
+INSERT INTO USERS(ACCOUNT_TYPE, EMAIL, USERNAME, PASSWORD) VALUES
+    (
+        'worker', 'worker@gmail.com', 'Worker', '1234'
+    ),
+    (
+        'client', 'client@gmail.com', 'Client', '1234'
+    );
+
+CREATE TABLE PRODUCTS(
+    ID INT GENERATED ALWAYS AS IDENTITY(START WITH 1, INCREMENT BY 1) PRIMARY KEY,
+    NAME VARCHAR(40) UNIQUE,
+    DESCRIPTION VARCHAR(250) UNIQUE,
+    PRICE NUMERIC(5,2),
+    IMAGE VARCHAR(250),
+    CATEGORY VARCHAR(30)
+);
+
+INSERT INTO PRODUCTS(NAME, DESCRIPTION, PRICE, IMAGE, CATEGORY) VALUES
+    (
+        'Colombian Coffee', 
+        '100% Arabica coffee beans grown in the mountains of Colombia', 
+        12.99,
+        './img/capsula1.webp',
+        'coffee'
+    ),
+    (
+        'Espresso Coffee', 
+        'Rich, bold espresso made from 100% Arabica beans', 
+        14.99, 
+        './img/capsula1.webp',
+        'coffee'
+    ),
+    (
+        'Cappuccino Coffee', 
+        'A classic Italian coffee drink made with espresso and frothed milk', 
+        16.99, 
+        './img/capsula1.webp',
+        'coffee'
+    ),
+    (
+        'Dark Chocolate', 
+        'Intensely flavored dark chocolate made from 70% cocoa beans', 
+        9.99, 
+        './img/capsula1.webp',
+        'chocolate'
+    ),
+    (
+        'Milk Chocolate', 
+        'Smooth and creamy milk chocolate made with 35% cocoa beans', 
+        8.99, 
+        './img/capsula1.webp',
+        'chocolate'
+    ),
+    (
+        'Mint Chocolate', 
+        'Rich dark chocolate infused with natural peppermint oil', 
+        10.99, 
+        './img/capsula1.webp',
+        'chocolate'
+    ),
+    (
+        'Matcha Green Tea', 
+        'Premium grade Japanese green tea powder with a rich, earthy flavor', 
+        18.99, 
+        './img/capsula1.webp',
+        'tea'
+    ),
+    (
+        'Chai Tea', 
+        'A blend of black tea, cinnamon, cardamom, and other spices with a sweet and spicy flavor', 
+        8.99, 
+        './img/capsula1.webp',
+        'tea'
+    ),
+    (
+        'Earl Grey Tea', 
+        'A black tea blend flavored with bergamot oil for a distinctive aroma and taste', 
+        10.99, 
+        './img/capsula1.webp',
+        'tea'
+    );

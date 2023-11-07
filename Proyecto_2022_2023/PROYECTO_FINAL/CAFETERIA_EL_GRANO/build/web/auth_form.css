@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+
+:root{
+    --form-color-background:#2B1201;
+    --icon-color: #FDE2B8;
+    --form-field-border: #D9B988;
+    --form-field-unselected-background: #D9B988;
+    --form-field-selected-background: #C59853;
+    --text-font-normal: 'Alef', sans-serif;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: var(--text-font-titles);
+}
+
+
+/* FORMULARIO GENERAL */
+#sign-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    animation: fadeIn 1s;
+    background-color: var(--form-color-background);
+    border: 5px rgb(255, 164, 78) solid;
+    box-shadow: 0px 0px 11px 6px rgb(70, 42, 16);
+    display: flex;
+
+
+    width: 40vw;
+    min-height: 70vh;
+    max-height: 70vh;
+}
+
+#sign-container .left{
+    display: flex;
+    gap: 13.52%;
+    flex-direction: column;
+    /*background: url(../assets/seamless.png);*/
+    /*background-size:contain;*/
+    width: 44%;
+    min-height: 100%;
+    align-items: center;
+}
+
+.left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+#sign-container .left *{
+    z-index: 1;
+}
+
+#sign-container .left .logo-form{
+    width: 69.69%;
+    padding-top: 3em;
+}
+
+#sign-container .left img{
+    width: 100%;
+}
+
+#sign-container .left .slogan{
+    text-align: center;
+    font-size: 2.6em;
+    color: #443213;
+    font-family: var(--text-font-titles);
+    letter-spacing: 0.07em;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #D9B988;
+}
+
+/* FORMULARIO LADO DE LA DERECHA */
+#sign-container .right{
+    position: relative;
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 6vh;
+    background: linear-gradient(139.06deg, #1C0B00 -39.02%, #33261d 136.48%);
+}
+
+/* BOTONES INICIO SESION Y REGISTRO */
+
+#sign-container .options-container{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    margin-top: 13%;
+}
+
+#sign-container .options-container .sign-option{
+    display: flex;
+    color: white;
+    background-color: var(--form-field-unselected-background);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+}
+
+#sign-container .options-container .sign-option:hover{
+    /* filter: brightness(110%); */
+    filter: contrast(130%);
+}
+
+#sign-container #signin-button{
+    background-color: var(--form-field-selected-background);
+}
+
+/* FORMULARIO */
+#sign-container .form-container{
+    width: 50%;
+    text-align: center;
+}
+
+#sign-container .form-container form{
+    display: flex;
+    flex-direction: column;
+    row-gap:4vh;
+    width: 100%;
+}
+
+#sign-container .signup.form-container{
+    display: none;
+}
+
+#sign-container .input-container{
+    display: flex;
+    background-color:#8C5A38;
+    border: 3px solid #D9B988;
+    border-radius: 4px;
+    max-width: 100%;
+    height: 2.6em;
+}
+
+#sign-container .form-field{
+    height: 2.6em;
+    max-width: 100%;
+    border-width: 3px;
+    border-radius: 4px;
+}
+
+
+#sign-container .form-input:focus{
+    outline: none;
+}
+
+#sign-container .form-input{
+    border-style: none;
+    width: 100%;
+    background-color: #8C5A38;
+    color: white;
+    padding: 0% 5%;
+    font-size: 1em;
+}
+
+#sign-container .icon-container{
+    max-height: 100%;
+    padding: 0.8em;
+    background-color: #A87654;
+    width: 10%;
+}
+
+#sign-container .icon{
+    height: 100%;
+    fill: var(--icon-color);
+}
+
+#sign-container .button{
+    /* width: 100%;
+    height: 72.6px; */
+    border: 5px solid #8C5A38;
+    border-radius: 2px;
+    color: white;
+    background-color: #EABB73;
+    font-size: 1.6em;
+}
+
+#sign-container .button:hover{
+    /* background-color:#f8cf92; */
+    filter: contrast(130%);
+    transform: scale(1.02);
+}
+
+#sign-container option:hover{
+    /* font-size: 3em; */
+    box-shadow: inset 0 0 10px 100px #1882A8;
+}
